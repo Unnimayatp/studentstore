@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--    <link rel="stylesheet" href="37successfulmsgonsubmit.css">-->
+<!--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"-->
+<!--    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdy/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">-->
+
+
+<style>
+body{
+     background:lightblue;
+
+}
+.student-form{
+      max-width:300px;
+      margin:auto;
+      border-radius:2px;
+
+      padding:20;
+}
+input[type="text"], select{
+     width:100%;
+     padding:12px 20px;
+     margin:8px 0;
+     border:1px solid #ccc;
+     display:inline-block;
+     border-radius:4px;
+}
+
+input[type=submit]:hover:{
+     background:#000;
+}
+
+
+input[type="email"]{
+
+      width:100%;
+     padding:12px 20px;
+     display:inline-block;
+     margin:8px 0;
+     border:1px solid #ccc;
+     border-radius:4px;
+
+}
+
+input[type="submit"]{
+  background-color:white /* Green */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: Black;
+  padding:10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+
+
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="student-form">
+<form action="{% url 'form' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="first_name" placeholder="Enter Your First Name"><br>
+    <input type="text" name="last_name" placeholder="Enter Your  Last Name"><br>
+    <input type="text" name="dateofbirth" placeholder="Enter Your Date of Birth"><br>
+    <input type="radio" name="gender" value="m">male
+     <input type="radio" name="gender" value="f">female<br>
+
+    <input type="text" name="address" placeholder="Enter Your Address"><br>
+
+
+    <input type="text" name="phone_number" placeholder="Enter Your Phonenumber"><br>
+    <input type="email" name="email" placeholder="Enter Your Email Address"><br>
+    <select id="department">
+        <option value="Department">Select Your Department</option>
+        <option value="Physics">Physics</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="ComputerScience">ComputerScience</option>
+        <option value="Math">Math</option>
+        <option value="Biology">Biology</option>
+
+    </select><br>
+    <input type="text" name="course" placeholder="Enter Your Course"><br>
+    <input type="text" name="purpose" placeholder="Enter Your Purpose"><br>
+<!--    <input type="checkbox" name="material"  value="material">pen-->
+<!--    <input type="checkbox" name="material"  value="material">book-->
+<!--    <input type="checkbox" name="material"  value="material">exam papers<br>-->
+
+<!--   <div class="button">-->
+    <input type="Submit" class="btn btn-success">
+<!--   </div>-->
+<!--    <div class="message" onclick="message()">-->
+<!--        <div class="succss" id="success">Registered</div>-->
+<!--        <div class="danger" id="danger">Fields cant be empty</div>-->
+
+<!--    </div>-->
+
+
+
+
+<div class="container signin" >
+      <a href="logout">logout </a>.</p>
+ </div>
+</form>
+
+</div>
+</body>
+</html>
